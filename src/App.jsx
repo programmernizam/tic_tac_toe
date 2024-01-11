@@ -1,9 +1,9 @@
-function App() {
+import Board from "./components/Board";
+
+export default function App() {
   return (
     <>
-      <h1 className="text-red-400 text-3xl">Tic Tac Toe</h1>
+      <Board />
     </>
   );
 }
-
-export default App;
