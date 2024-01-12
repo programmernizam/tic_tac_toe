@@ -1,6 +1,6 @@
 import Square from "./Square";
 
-export default function Board() {
+export default function Board({ xIsNext, squares, onPlay }) {
   const winner = calculateWinner(squares);
   let status;
   if (winner) {
@@ -20,8 +20,7 @@ export default function Board() {
     } else {
       nextSquares[i] = "0";
     }
-    setSquares(nextSquares);
-    setXIsNext(!xIsNext);
+    onPlay(nextSquares);
   }
   return (
     <>
